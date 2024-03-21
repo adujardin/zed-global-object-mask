@@ -70,7 +70,7 @@ void createGlobalMaskFromBodiesMask(sl::Bodies &o, sl::Mat &mask, sl::Resolution
     cv::Mat mask_ocv = slMat2cvMat(mask);
 
     // order vector by depth to handle "conflicts"
-    std::sort(o.body_list.begin(), o.body_list.end(), less_than_key());
+    //std::sort(o.body_list.begin(), o.body_list.end(), less_than_key());
 
     for (auto &it : o.body_list) {
         if (overwrite_mask_with_box) {
@@ -103,7 +103,7 @@ void createGlobalMaskFromObjectsMask(sl::Objects &o, sl::Mat &mask, sl::Resoluti
     cv::Mat mask_ocv = slMat2cvMat(mask);
 
     // order vector by depth to handle "conflicts"
-    std::sort(o.object_list.begin(), o.object_list.end(), less_than_key());
+    //std::sort(o.object_list.begin(), o.object_list.end(), less_than_key());
     
     for (auto &it : o.object_list) {
         if (overwrite_mask_with_box) {
